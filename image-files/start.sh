@@ -6,7 +6,7 @@ if [[ "$PASSWORD" == "" ]]; then
 fi
 
 SSH_PORT=8022
-if [[ "$PORT" == "" ]]; then
+if [[ "$PORT" != "" ]]; then
   SSH_PORT=$PORT
 fi
 

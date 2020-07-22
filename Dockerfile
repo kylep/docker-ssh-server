@@ -8,7 +8,8 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/* \
  && mkdir -p \
    /run/sshd \
-   /var/log/ssh
+   /var/log/ssh \
+ && echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
 # User must set the root password
 ENV PASSWORD=""
