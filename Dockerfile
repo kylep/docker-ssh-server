@@ -1,7 +1,6 @@
 # ssh-server-docker
 FROM ubuntu:bionic
 LABEL maintainer="kyle@pericak.com"
-COPY image-files/ /
 RUN apt-get update \
  && apt-get install -y \
       openssh-server \
@@ -10,6 +9,8 @@ RUN apt-get update \
    /run/sshd \
    /var/log/ssh \
  && echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+
+COPY image-files/ /
 
 # User must set the root password
 ENV PASSWORD=""

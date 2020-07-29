@@ -1,0 +1,9 @@
+ChallengeResponseAuthentication no
+UsePAM yes
+X11Forwarding yes
+PrintMotd no
+AcceptEnv LANG LC_*
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+PermitRootLogin yes
+KexAlgorithms +diffie-hellman-group1-sha1
+Ciphers +aes128-cbc
